@@ -73,7 +73,27 @@
     
     requestAnimationFrame(loop, canvas);
 
+ function leDoTeclado(event){
+        if((event.keyCode == esquerda)&&(x >=25)){
+            x -= passo;
+        }
+        if((event.keyCode == cima)&&(y>=25)){
+            y -= passo;
+        }
+        if((event.keyCode == direita)&&(x<=355)){
+            x += passo;
+        }
+        if((event.keyCode == baixo)&&(y<=355)){
+            y += passo;
+        }
+    }
 
+    document.onkeydown = leDoTeclado; 
+
+
+
+
+}())
 
 
 
